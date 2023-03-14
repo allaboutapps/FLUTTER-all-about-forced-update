@@ -1,8 +1,22 @@
-AllAboutForcedUpdate
+# all_about_forced_update
+
+## Install
+
+Add `all_about_forced_update` as dependency to your `pubspec.yaml`
+```yaml
+dependencies:
+  all_about_debug:
+   git:
+     url: https://git.allaboutapps.at/scm/flutter/all-about-forced-update.git
+```
 
 ## Features
 
-Check if the current version of the app is outdated and needs an update.
+* Check if the current version of the app is outdated and needs an update.
+* Open the app store for the user to update
+
+## Usage
+
 Provide an url to a .json file with the following contents:
 
 ```json
@@ -12,4 +26,18 @@ Provide an url to a .json file with the following contents:
   "iosAppStoreId": "123456789",
   "androidPackageName": "at.allaboutapps.app"
 }
+```
+
+Check if an update is needed
+
+```dart
+if (await AllAboutForcedUpdate.instance.forcedUpdateNeeded(forcedUpdateConfigUrl)) {
+  // show update screen or dialog
+}
+```
+
+Open the app store to update the app
+
+```dart
+AllAboutForcedUpdate.instance.openAppStore()
 ```

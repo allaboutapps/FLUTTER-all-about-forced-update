@@ -1,6 +1,6 @@
 name: all_about_forced_update
 description: Force update an outdated app
-version: 1.1.0
+version: 1.1.1
 homepage: https://allaboutapps.at
 
 environment:

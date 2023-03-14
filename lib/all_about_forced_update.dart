@@ -36,7 +36,7 @@ class AllAboutForcedUpdate {
       }
     } catch (e) {
       if (kDebugMode) {
-        print('Download of .json file or parsing failed: $e');
+        print('Download or parsing of forced updated file failed! $updateConfigUrl: $e');
       }
     }
     return false;
