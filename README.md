@@ -5,9 +5,9 @@
 Add `all_about_forced_update` as dependency to your `pubspec.yaml`
 ```yaml
 dependencies:
-  all_about_debug:
+  all_about_forced_update:
    git:
-     url: https://git.allaboutapps.at/scm/flutter/all-about-forced-update.git
+     url: ssh://git@git-svc.allaboutapps.at:2222/flutter/all-about-forced-update.git
 ```
 
 ## Features
