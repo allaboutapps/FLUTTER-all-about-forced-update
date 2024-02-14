@@ -18,12 +18,12 @@ class AllAboutForcedUpdate {
   String? _iosAppStoreId;
   String? _androidPackageName;
 
-  Future<bool> forcedUpdateNeeded(String updateConfigUrl) async {
+  Future<bool> forcedUpdateNeeded(String updateConfigUrl, {Duration timeout = const Duration(seconds: 5)}) async {
     try {
       int? localVersion = int.tryParse((await PackageInfo.fromPlatform()).buildNumber);
 
       Uri url = Uri.parse(updateConfigUrl);
-      var response = await http.get(url).timeout(const Duration(seconds: 2));
+      var response = await http.get(url).timeout(timeout);
       var json = jsonDecode(response.body);
 
       int? onlineVersion = Platform.isAndroid ? json['minVersionCodeAndroid'] : json['minVersionCodeIos'];
