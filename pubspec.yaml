@@ -1,19 +1,19 @@
 name: all_about_forced_update
 description: Force update an outdated app
-version: 3.0.0
+version: 4.0.0
 homepage: https://allaboutapps.at
 
 environment:
-  sdk: ">=3.0.0 <4.0.0"
+  sdk: ">=3.9.0 <4.0.0"
 
 dependencies:
   flutter:
     sdk: flutter
-  package_info_plus: ^8.0.2
+  package_info_plus: ^9.0.0
   http: ^1.2.0
   open_store: ^0.5.0
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
-  flutter_lints: ^4.0.0
+  flutter_lints: ^6.0.0
