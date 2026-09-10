@@ -1,4 +1,4 @@
-library all_about_forced_update;
+library;
 
 import 'dart:convert';
 import 'dart:io';
